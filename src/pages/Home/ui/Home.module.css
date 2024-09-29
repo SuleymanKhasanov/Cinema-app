@@ -1,7 +1,15 @@
 .topRatedMoviesList {
   display: flex;
-  gap: 20px;
   overflow-x: scroll;
   width: 100%;
   padding-bottom: 100px;
+  scrollbar-width: inherit;
+}
+
+.topRatedMoviesTitle {
+  margin-bottom: 20px;
+}
+
+.slickSlide {
+  width: 303px;
 }

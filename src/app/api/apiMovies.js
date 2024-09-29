@@ -5,10 +5,6 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 
 export const getTopRatedMovies = async () => {
   try {
-    console.log(
-      `Fetching from: ${BASE_URL}movie/top_rated with API key: ${API_KEY}`,
-    );
-
     const response = await axios.get(`${BASE_URL}movie/top_rated`, {
       params: {
         api_key: API_KEY,

@@ -1,7 +1,6 @@
 import styles from './ui/MovieCardActions.module.css';
 
 const MovieCardActions = ({ rating }) => {
-  console.log(rating);
   return (
     <>
       <span className={styles.movieRaiting}>
