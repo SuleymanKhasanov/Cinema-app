@@ -1,0 +1,42 @@
+.sidebar {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.sidebarNavigation {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.sidebarMenu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: left;
+  gap: 30px;
+}
+
+.sidebarItem {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.5s ease;
+}
+
+.sidebarItem:hover {
+  background-color: #252525;
+  border-radius: 5px;
+}
+
+.sidebarItem:active {
+  background-color: #252525;
+  border-radius: 5px;
+}

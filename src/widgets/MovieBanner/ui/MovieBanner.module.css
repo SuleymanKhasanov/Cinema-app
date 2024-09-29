@@ -1,0 +1,46 @@
+.movieBanner {
+  width: 100%;
+  height: 455px;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.movieBannerCard {
+  position: relative;
+}
+
+.movieBanerImg {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.movieInfo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.moveName {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.movieTitle {
+  font-size: 20px;
+  color: #c3c3c3;
+}
+
+.movieDescription {
+  font-size: 14px;
+  color: #777777;
+}

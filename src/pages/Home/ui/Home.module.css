@@ -1,0 +1,7 @@
+.topRatedMoviesList {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  width: 100%;
+  padding-bottom: 100px;
+}
