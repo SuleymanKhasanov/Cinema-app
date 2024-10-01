@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ui/MovieBanner.module.css';
+import styles from './styles/MovieBanner.module.css';
 import MovieCardActions from '../../features/MovieCardActions/MovieCardActions';
 
 const MovieBanner = ({ title, rating, poster }) => {

@@ -4,7 +4,7 @@ import { getTopRatedMovies } from '../../app/api/apiMovies';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import styles from './ui/Home.module.css';
+import styles from './styles/Home.module.css';
 
 const Home = () => {
   const [topRatedMovies, setTopRatedMovies] = useState([]);
@@ -39,7 +39,7 @@ const Home = () => {
         Топ Рейтинг Фильмов
       </h1>
       <Slider {...settings} className={styles.slickSlide}>
-        {topRatedMovies.length > 0
+        {topRatedMovies?.length > 0
           ? topRatedMovies.map((element) => (
               <MovieBanner
                 key={element.id}

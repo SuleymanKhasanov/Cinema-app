@@ -27,7 +27,6 @@
   gap: 40px;
   align-items: center;
   cursor: pointer;
-  padding: 10px;
   transition: all 0.5s ease;
 }
 
@@ -37,6 +36,24 @@
 }
 
 .sidebarItem:active {
+  background-color: #252525;
+  border-radius: 5px;
+}
+
+.sidebarItemLink {
+  font-size: inherit;
+  color: inherit;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.sidebarItemLink:hover {
   background-color: #252525;
   border-radius: 5px;
 }

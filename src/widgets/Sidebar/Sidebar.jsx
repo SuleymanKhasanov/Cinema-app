@@ -1,13 +1,17 @@
 import NavigationItem from '../../features/NavigatioItem/NavigationItem';
-import styles from './ui/Sidebar.module.css';
-import logo from './ui/icons/logo.svg';
-import menu from './ui/icons/menu.svg';
-import search from './ui/icons/search.svg';
-import movies from './ui/icons/movies.svg';
-import series from './ui/icons/series.svg';
-import anime from './ui/icons/anime.svg';
-import history from './ui/icons/history.svg';
+import styles from './styles/Sidebar.module.css';
+import logo from './icons/logo.svg';
+import menu from './icons/menu.svg';
+import search from './icons/search.svg';
+import movies from './icons/movies.svg';
+import series from './icons/series.svg';
+import anime from './icons/anime.svg';
+import history from './icons/history.svg';
 import { useState } from 'react';
+import {
+  Link,
+  NavLink,
+} from 'react-router-dom/cjs/react-router-dom.min';
 
 const Sidebar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -28,31 +32,63 @@ const Sidebar = () => {
       <nav className={styles.sidebarNavigation}>
         <ul className={styles.sidebarMenu}>
           <li className={styles.sidebarItem}>
-            <NavigationItem logo={logo} text={'Prisma'} />
+            <Link to="/" className={styles.sidebarItemLink}>
+              <NavigationItem logo={logo} text={'Prisma'} />
+            </Link>
           </li>
           <li
-            className={styles.sidebarItem}
+            className={styles.sidebarItemLink}
             onClick={handdleShowMenu}
           >
             <NavigationItem logo={menu} text={'Меню'} />
           </li>
           <li className={styles.sidebarItem}>
-            <NavigationItem logo={search} text={'Поиск'} />
+            <NavLink
+              to="/search"
+              activeStyle={{ background: '#093205' }}
+              className={styles.sidebarItemLink}
+            >
+              <NavigationItem logo={search} text={'Поиск'} />
+            </NavLink>
           </li>
           <li className={styles.sidebarItem}>
-            <NavigationItem logo={movies} text={'Фильмы'} />
+            <NavLink
+              to="/movies"
+              activeStyle={{ background: '#093205' }}
+              className={styles.sidebarItemLink}
+            >
+              <NavigationItem logo={movies} text={'Фильмы'} />
+            </NavLink>
           </li>
           <li className={styles.sidebarItem}>
-            <NavigationItem logo={series} text={'Сериалы'} />
+            <NavLink
+              to="/series"
+              activeStyle={{ background: '#093205' }}
+              className={styles.sidebarItemLink}
+            >
+              <NavigationItem logo={series} text={'Сериалы'} />
+            </NavLink>
           </li>
           <li className={styles.sidebarItem}>
-            <NavigationItem logo={anime} text={'Аниме'} />
+            <NavLink
+              to="/anime"
+              activeStyle={{ background: '#093205' }}
+              className={styles.sidebarItemLink}
+            >
+              <NavigationItem logo={anime} text={'Аниме'} />
+            </NavLink>
           </li>
           <li className={styles.sidebarItem}>
-            <NavigationItem
-              logo={history}
-              text={'История просмотров'}
-            />
+            <NavLink
+              to="/history"
+              activeStyle={{ background: '#093205' }}
+              className={styles.sidebarItemLink}
+            >
+              <NavigationItem
+                logo={history}
+                text={'История просмотров'}
+              />
+            </NavLink>
           </li>
         </ul>
       </nav>
