@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import MovieBanner from '../../widgets/MovieBanner/MovieBanner';
-import { getTopRatedMovies } from '../../app/api/apiMovies';
+import { getWeekTranding } from '../../app/api/apiMovies';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import styles from './styles/Home.module.css';
 
 const Home = () => {
-  const [topRatedMovies, setTopRatedMovies] = useState([]);
+  const [weekTrending, setWeekTrending] = useState([]);
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const movies = await getTopRatedMovies();
-        setTopRatedMovies(movies);
+        const movies = await getWeekTranding();
+        setWeekTrending(movies);
       } catch (error) {
         console.log(error);
       }
@@ -21,7 +21,6 @@ const Home = () => {
     fetchMovies();
   }, []);
 
-  // Переместим настройки слайдера сюда
   const settings = {
     dots: false,
     infinite: true,
@@ -35,17 +34,17 @@ const Home = () => {
 
   return (
     <section className={styles.topRatedMovies}>
-      <h1 className={styles.topRatedMoviesTitle}>
-        Топ Рейтинг Фильмов
-      </h1>
+      <h1 className={styles.topRatedMoviesTitle}>Последние тренды</h1>
       <Slider {...settings} className={styles.slickSlide}>
-        {topRatedMovies?.length > 0
-          ? topRatedMovies.map((element) => (
+        {weekTrending?.length > 0
+          ? weekTrending.map((element) => (
               <MovieBanner
                 key={element.id}
-                title={element.title}
+                title={element.title || element.name}
                 rating={element.vote_average}
                 poster={`https://image.tmdb.org/t/p/w500/${element.poster_path}`}
+                mediaType={element.media_type}
+                genere={element.genre_ids}
               />
             ))
           : null}

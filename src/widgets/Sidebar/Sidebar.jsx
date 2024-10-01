@@ -7,6 +7,7 @@ import movies from './icons/movies.svg';
 import series from './icons/series.svg';
 import anime from './icons/anime.svg';
 import history from './icons/history.svg';
+import close from './icons/close.svg';
 import { useState } from 'react';
 import {
   Link,
@@ -40,7 +41,10 @@ const Sidebar = () => {
             className={styles.sidebarItemLink}
             onClick={handdleShowMenu}
           >
-            <NavigationItem logo={menu} text={'Меню'} />
+            <NavigationItem
+              logo={toggleMenu ? close : menu}
+              text={'Меню'}
+            />
           </li>
           <li className={styles.sidebarItem}>
             <NavLink
@@ -86,7 +90,7 @@ const Sidebar = () => {
             >
               <NavigationItem
                 logo={history}
-                text={'История просмотров'}
+                text={'Посмотреть позже'}
               />
             </NavLink>
           </li>

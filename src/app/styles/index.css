@@ -22,3 +22,8 @@ body {
 a {
   text-decoration: none;
 }
+
+i {
+  color: #17a03d;
+  font-style: normal;
+}
