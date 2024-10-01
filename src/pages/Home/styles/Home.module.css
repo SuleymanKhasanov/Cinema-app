@@ -13,3 +13,14 @@
 .slickSlide {
   width: 82%;
 }
+
+.popularMovies {
+  margin-top: 20px;
+  margin-right: 70px;
+}
+
+.popularMoviesBlock {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+}

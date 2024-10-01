@@ -14,7 +14,51 @@ export const getWeekTranding = async () => {
 
     return response.data.results;
   } catch (error) {
-    console.error('Error fetching top-rated movies:', error);
+    throw error;
+  }
+};
+
+export const getPopularMovies = async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}movie/popular`, {
+      params: {
+        api_key: API_KEY,
+        language: 'ru-RU',
+      },
+    });
+
+    return response.data.results;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getPopularSeries = async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}tv/popular`, {
+      params: {
+        api_key: API_KEY,
+        language: 'ru-RU',
+      },
+    });
+
+    return response.data.results;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getTopRatedMovies = async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}movie/top_rated`, {
+      params: {
+        api_key: API_KEY,
+        language: 'ru-RU',
+      },
+    });
+
+    return response.data.results;
+  } catch (error) {
     throw error;
   }
 };

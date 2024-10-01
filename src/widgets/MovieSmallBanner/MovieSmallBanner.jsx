@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './styles/MovieBanner.module.css';
+import styles from './styles/MovieSmallBanner.module.css';
 import MovieCardActions from '../../features/MovieCardActions/MovieCardActions';
 import { moviesGeners } from '../../app/assets/assets';
 import { seriesGenere } from '../../app/assets/assets';
 
-const MovieBanner = ({
+const MovieSmallBanner = ({
   title,
   rating,
   poster,
@@ -20,20 +20,20 @@ const MovieBanner = ({
   });
 
   return (
-    <div className={styles.movieBanner}>
-      <div className={styles.movieBannerCard}>
+    <div className={styles.movieSmallBanner}>
+      <div className={styles.movieSmallBannerCard}>
         <img
           src={poster}
           alt={`poster by ${title}`}
-          className={styles.movieBanerImg}
+          className={styles.movieSmallBanerImg}
         />
-        <div className={styles.movieInfo}>
+        <div className={styles.movieSmallInfo}>
           <MovieCardActions rating={rating} />
         </div>
       </div>
-      <div className={styles.moveName}>
-        <h3 className={styles.movieTitle}>{title}</h3>
-        <p className={styles.movieDescription}>
+      <div className={styles.moveSmallName}>
+        <h3 className={styles.movieSmallTitle}>{title}</h3>
+        <p className={styles.movieSmallDescription}>
           {genreNames.join(', ')}
         </p>
       </div>
@@ -41,4 +41,4 @@ const MovieBanner = ({
   );
 };
 
-export default MovieBanner;
+export default MovieSmallBanner;

@@ -1,0 +1,45 @@
+.movieSmallBanner {
+  width: 70%;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.movieSmallBannerCard {
+  position: relative;
+}
+
+.movieSmallBanerImg {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.movieSmallInfo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.moveSmallName {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.movieSmallTitle {
+  font-size: 20px;
+  color: #c3c3c3;
+}
+
+.movieSmallDescription {
+  font-size: 14px;
+  color: #777777;
+}
